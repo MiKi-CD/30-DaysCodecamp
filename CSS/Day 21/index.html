@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="assets/favicon/apple-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="index">
+            <img src="assets/top-bar/apple-logo-50.png" alt="">
+            <span>Finder</span>
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Go</span>
+            <span>Window</span>
+            <span>Help</span>
+        </div>
+        <div class="action">
+            <span id="batteryStatus">
+                <i class="fa-solid fa-battery-three-quarters"></i>
+                <span id="batteryLevel"></span>%
+            </span>
+            <span id="currentDateTime"></span>
+        </div>
+    </header>
+    <div class="desk">
+        <div class="apps"><img src="assets/desk/recycle-bin-144.png" alt="">
+        </div>
+        <div class="drawer">
+            <div class="apps"><img src="assets/app-drawer/safari.png" alt="">
+                <p>Safari</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/adobe-after-effects-144.png" alt="">
+                <p>After Effects</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/adobe-creative-cloud-144.png" alt="">
+                <p>Creative Cloud</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/app-store-144.png" alt="">
+                <p>App Store</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/apple-arcade-144.png" alt="">
+                <p>Arcade</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/calculator-144.png" alt="">
+                <p>Calculator</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/chrome-144.png" alt="">
+                <p>Chrome</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/discord-144.png" alt="">
+                <p>Discord</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/instagram-144.png" alt="">
+                <p>Instagram</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/final-cut-pro-x-144.png" alt="">
+                <p>Final Cut</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/itunes-144.png" alt="">
+                <p>iTunes</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/netflix-144.png" alt="">
+                <p>Netflix</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/twitter-144.png" alt="">
+                <p>Twitter</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/visual-studio-code-2019-144.png" alt="">
+                <p>VS Code</p>
+            </div>
+            <div class="apps"><img src="assets/app-drawer/ios-photos-144.png" alt="">
+                <p>Photos</p>
+            </div>
+        </div>
+        <footer>
+            <div class="apps"><img src="assets/bottom-bar/terminal-100.png" alt="">
+            </div>
+            <div class="apps"><img src="assets/bottom-bar/messages-100.png" alt="">
+            </div>
+            <div class="apps"><img src="assets/bottom-bar/zoom-100.png" alt="">
+            </div>
+            <div class="apps"><img src="assets/bottom-bar/icloud-100.png" alt="">
+            </div>
+            <div class="apps"><img src="assets/bottom-bar/settings-100.png" alt="">
+            </div>
+        </footer>
+
+
+        <!-- scripts are here   -->
+
+        <script>
+            // Function to format the date and time as "Sun 23 Jul 01:36"
+            function formatDateTime(dateTime) {
+                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+                const day = days[dateTime.getDay()];
+                const date = dateTime.getDate();
+                const month = months[dateTime.getMonth()];
+                const hours = String(dateTime.getHours()).padStart(2, '0');
+                const minutes = String(dateTime.getMinutes()).padStart(2, '0');
+
+                return `${day} ${date} ${month} ${hours}:${minutes}`;
+            }
+
+            // Function to update the current date and time
+            function updateDateTime() {
+                const currentDateTimeElement = document.getElementById('currentDateTime');
+                const now = new Date();
+                const formattedDateTime = formatDateTime(now);
+                currentDateTimeElement.textContent = formattedDateTime;
+            }
+
+            // Update the date and time every second
+            setInterval(updateDateTime, 1000);
+
+            // Call the function initially to set the initial date and time
+            updateDateTime();
+        </script>
+        <script>
+            // Check if the Battery Status API is available in the browser
+            if ('getBattery' in navigator) {
+                const batteryStatusElement = document.getElementById('batteryStatus');
+                const batteryLevelElement = document.getElementById('batteryLevel');
+
+                // Function to update the battery status
+                function updateBatteryStatus(battery) {
+                    const batteryLevel = Math.floor(battery.level * 100);
+                    batteryLevelElement.textContent = batteryLevel;
+                }
+
+                // Function to handle changes in the battery status
+                function handleBatteryChange(event) {
+                    updateBatteryStatus(event.target);
+                }
+
+                // Get the initial battery status and add an event listener for changes
+                navigator.getBattery().then(function (battery) {
+                    updateBatteryStatus(battery);
+                    battery.addEventListener('levelchange', handleBatteryChange);
+                });
+            } else {
+                // If the Battery Status API is not supported, hide the battery status element
+                document.getElementById('batteryStatus').style.display = 'none';
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/b820ceba9d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

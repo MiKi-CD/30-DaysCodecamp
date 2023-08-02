@@ -1,0 +1,31 @@
+/* CSS Stylesheet */
+
+/* Set the font family for the entire document body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Styling for the container element */
+  .container {
+    border: 2px solid #482121; /* Add a 2px solid border with a dark brown color */
+    padding: 20px; /* Add 20px of padding inside the container */
+    margin: 10px; /* Add 10px of margin around the container */
+  }
+  
+  /* Styling for the inner element */
+  .inner {
+    margin: 10px; /* Add 10px of margin around the inner element */
+    padding: 10px; /* Add 10px of padding inside the inner element */
+    color: #333333; /* Set the text color to a dark gray */
+    background-color: #F5EEDC; /* Set the background color to a light beige */
+    border: 5px solid #DD4A48; /* Add a 5px solid border with a red color */
+  }
+  
+  /* Styling for the outer element */
+  .outer {
+    margin: 20px; /* Add 20px of margin around the outer element */
+    padding: 10px; /* Add 10px of padding inside the outer element */
+    color: #333333; /* Set the text color to a dark gray */
+    background-color: #579BB1; /* Set the background color to a light blue */
+  }
+  

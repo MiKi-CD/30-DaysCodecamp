@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url(assets/bg/bg.jpg) no-repeat;
+    background-size: cover;
+
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.435);
+    backdrop-filter: blur(50px);
+    padding: 0.4em;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+}
+
+.index {
+    display: flex;
+    align-items: center;
+}
+
+header>.index img {
+    width: 100%;
+    max-width: 1.2em;
+    height: auto;
+    margin: 0 0.8em 0 0.4em;
+}
+
+
+.index span {
+    margin: 0 0.5em;
+    cursor: default;
+}
+
+.index span:hover {
+    transform: scale(1.1);
+    transition: all ease-in 200ms;
+}
+
+.index img:hover {
+    transform: scale(1.1);
+    transition: all ease-in 200ms;
+    filter: drop-shadow(0 0 10px);
+}
+
+header #batteryStatus {
+    margin-right: 0.5em;
+}
+
+header #currentDateTime {
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+
+.desk>.apps {
+    margin: 1em;
+}
+
+.drawer {
+    position: relative;
+    top: 3em;
+    display: grid;
+    width: 50%;
+    height: 400px;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 2em auto;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #0000005d;
+    border-radius: 0.8em;
+    backdrop-filter: blur(50px);
+    padding: 0.8em;
+}
+
+.apps {
+    width: 50px;
+    height: 50px;
+    font-size: 0.8em;
+    color: #ffffffdc;
+    text-align: center;
+}
+
+.apps:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 100ms;
+    filter: drop-shadow(0 0px 5px black);
+}
+
+.apps img {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 35em;
+    left: 35em;
+    bottom: 20px;
+    border-radius: 1em;
+    background-color: #0000006f;
+    backdrop-filter: blur(50px);
+    padding: 0.5em;
+    text-align: center;
+}
+
+footer img {
+    width: 30px;
+}

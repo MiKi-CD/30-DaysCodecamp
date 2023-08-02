@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono&display=swap');
+
+/* CSS Variables */
+:root {
+    --heading-font: 'Press Start 2P', cursive;
+    --content-font: 'Space Mono', monospace;
+    --primary-color: #222831;
+    --title-color: #00ADB5;
+    --txt-color: #d6d5d5;
+}
+
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+}
+
+/* Header Styles */
+header {
+    background-color: #393E46;
+    color: var(--title-color);
+    font-family: var(--heading-font);
+    text-align: center;
+    padding: 0.5em;
+    text-shadow: 0px 0px 10px;
+}
+
+/* List Section Styles */
+.list {
+    font-family: var(--content-font);
+    color: var(--txt-color);
+    font-weight: bold;
+    margin-top: 1.5em;
+    padding: 0.75em;
+    border-bottom: 5px dashed #393E46;
+}
+
+.list li {
+    list-style-position: inside;
+    list-style-image: url(icons8-hexagon-10.png);
+    padding: 1em;
+}
+
+/* Table Styles */
+table, td {
+    border: 5px solid #393E46;
+}
+
+table {
+    font-family: var(--content-font);
+    margin: 2em auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th {
+    background: linear-gradient(to bottom, #393E4686, #d6d5d566);
+    color: var(--title-color);
+    height: 2em;
+    padding: 1em;
+}
+
+td {
+    color: var(--txt-color);
+    height: 1em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background: radial-gradient(var(--primary-color), #0000006b);
+    margin-top: 5em;
+    padding: 0.2em;
+    text-align: center;
+    font-family: var(--content-font);
+    color: var(--title-color);
+    font-weight: bold;
+}

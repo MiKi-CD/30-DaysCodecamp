@@ -1,0 +1,46 @@
+/* Reset default margin and padding, set background color and font family for the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e3fddbcf;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Center-align the text in the header, set background color, text color, padding, and shadow effects */
+header {
+    text-align: center;
+    background-color: #282828;
+    color: #86c462ea;
+    padding: 1em;
+    text-shadow: 0.1em 0.1em 1em #56f23bb1;
+    box-shadow: 0 1em 1em;
+}
+
+/* Apply bold font weight, justified text alignment, margin, padding, opacity, and line height to the paragraphs */
+p {
+    font-weight: bold;
+    text-align: justify;
+    margin: 0.5em auto;
+    padding: 1.2em;
+    opacity: 0.5;
+    line-height: 2em;
+}
+
+/* Set height, background image, drop shadow, and background positioning for the image */
+.image {
+    height: 128px;
+    background-image: url(flag.webp);
+    filter: drop-shadow(10px 10px 5px);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Change background positioning when hovering over the image */
+.image:hover {
+    background-position: top;
+}
+
+/* Change background positioning when the image is active */
+.image:active {
+    background-position: bottom;
+}

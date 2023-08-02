@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #959da5;
+}
+
+body {
+    background: #24292e;
+    font-family: 'Roboto', sans-serif, serif;
+}
+
+
+header {
+    padding: 1em;
+    text-align: center;
+}
+
+nav>a {
+    display: inline-block;
+    padding: 0.4em;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav>a:hover {
+    transform: scale(1.05);
+    transition: all ease-in 200ms;
+}
+
+nav>a::selection,
+.title h1::selection,
+blockquote::selection {
+    background-color: #3392FF44;
+    color: #FFFFFF;
+}
+
+.title {
+    background-color: #2f363d;
+    border-radius: 1em;
+    width: 90%;
+    padding: 0.5em;
+    margin: 2.5em auto;
+    text-align: center;
+    box-shadow: 0px 5px 20px black;
+}
+
+.title h1 {
+    margin: 5em 0 0 0;
+}
+
+.title blockquote {
+    margin-bottom: 6em;
+    padding: 2em;
+}
+
+.title button,
+.box button,
+.feed button {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    background-color: #129834;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5em;
+    transition: all ease-in 200ms;
+}
+
+.container,
+.feed {
+    width: 90%;
+    margin: 2.5em auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box {
+    display: flex;
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1em auto;
+    border-radius: 1em;
+}
+
+.box h2,
+p {
+    margin: 0.5em 0 0.9em 0;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.box img,
+.feed img {
+    box-shadow: 0px 5px 10px black;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1em;
+    height: auto;
+}
+
+.feed {
+    justify-content: center;
+    align-items: stretch;
+}
+
+.feed img {
+    box-shadow: 0px 5px 10px black;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 1em;
+    height: auto;
+}
+
+.feed form {
+    padding: 2em;
+    margin: 2em;
+    flex-grow: 2;
+    background-color: #2f363d;
+    border-radius: 1em;
+}
+
+.feed form label {
+    display: block;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.feed form input,
+textarea {
+    display: block;
+    font-family: 'Roboto', sans-serif, serif;
+    background-color: #24292e;
+    font-weight: bold;
+    padding: 1em;
+    width: 100%;
+    border: none;
+    border-radius: 1em;
+    resize: none;
+}
+
+.feed button {
+    display: block;
+    width: 200px;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all ease-in 200ms;
+}
+
+button:hover {
+    background-color: #0d6222;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #2f363d;
+    padding: 0.02em;
+}

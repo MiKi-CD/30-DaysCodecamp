@@ -1,0 +1,38 @@
+/* Set the background color, text color, font family, and remove default margin and padding for the entire page */
+body {
+    background-color: #1f1f1e;
+    color: #b0b0b0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header element with a background color, text color, padding, text alignment, and bottom margin */
+header {
+    background-color: #ff4500;
+    color: #000000c0;
+    padding: 1em;
+    /* Consider using relative units (e.g., 'em') for padding to make it more responsive */
+    text-align: center;
+    word-spacing: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* Style the paragraph elements with justified text alignment, a background color with transparency, padding, margin, and rounded corners */
+p {
+    text-align: justify;
+    background-color: #b8b8b82d;
+    padding: 2em;
+    line-height: 2em;
+    margin: 2em 1em;
+    /* Adjust margin to create proper spacing around paragraphs */
+    border-left: 0.2em solid #ff4500;
+    border-radius: 1em;
+    font-size: 1em !important;
+    /* Set the font size in EM units */
+    /* font-size: 120%; */
+    /* Set the font size as a percentage */
+    /* font-size: 5vw; */
+    /* Set the font size using viewport units */
+    cursor: pointer;
+}

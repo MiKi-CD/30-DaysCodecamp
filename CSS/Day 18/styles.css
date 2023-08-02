@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    background: #212121;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+}
+
+.container {
+    width: 80%;
+    height: 500px;
+    margin: 3em auto;
+}
+
+/* Headings and Paragraphs */
+h2, p {
+    margin-top: 0.9em;
+    padding: 0.7em;
+    letter-spacing: 0.08em;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Card Styles */
+.box {
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 5em 3em 5em 3em;
+    width: 300px;
+    height: 400px;
+    float: left;
+    transition: all linear 200ms;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-top: 2.8em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+/* Card Colors */
+.one {
+    background: linear-gradient(to bottom, #6c97de, #9d7a67);
+}
+
+.two {
+    background: linear-gradient(to bottom, #eac88d, #8f7879);
+}
+
+.three {
+    background: linear-gradient(to bottom, #9f228a, #4b1156);
+}
+
+/* Card Hover Effect */
+.one:hover,
+.two:hover,
+.three:hover {
+    transform: scale(1.09);
+}
+
+/* Footer */
+footer {
+    padding: 1em;
+    text-align: center;
+    background: #212121;
+    color: #ffffff;
+    clear: both;
+}

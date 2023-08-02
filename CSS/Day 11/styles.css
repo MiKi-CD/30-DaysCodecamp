@@ -1,0 +1,54 @@
+/* Global styles */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+  }
+  
+  /* Header styles */
+  header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline solid 2px #e14242;
+    color: #5f4141;
+    word-spacing: 5px;
+    letter-spacing: 2.5px;
+  }
+  
+  /* Navigation styles */
+  ul {
+    list-style: none;
+    line-height: 50px;
+    background-color: #ffd700;
+    padding: 12.5px;
+    text-align: center;
+    border-radius: 25px;
+  }
+  
+  /* Link styles */
+  a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #5f4141;
+    word-spacing: 5px;
+    letter-spacing: 2.5px;
+  }
+  
+  /* Hover effect on links */
+  li a:hover {
+    background-color: #e14242;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Active link styles */
+  a:active {
+    color: #c43838;
+  }
+  
+  /* Visited link styles */
+  a:visited {
+    color: #7c3d3d;
+  }  

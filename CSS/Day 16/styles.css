@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS variables */
+:root {
+  --content-color: #ffffff;
+  --desc-font: 'Tektur', cursive;
+  --desc-color: #d57c08;
+}
+
+/* Body styles */
+body {
+  background: url(assets/images/S;G.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/* Header styles */
+header {
+  background-image: linear-gradient(#000000, #000000cb, #73737300);
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--content-color-color);
+  text-align: center;
+  letter-spacing: 0.3em;
+  text-decoration: underline;
+  text-shadow: 0px 0px 10px #ffffff;
+  padding: 1em;
+}
+
+/* Image styles */
+.image-box {
+  display: block;
+  margin: 1em auto;
+  width: 80%;
+  object-fit: fill;
+  border-radius: 2em;
+  box-shadow: 0px 0px 20px #f87320;
+}
+
+/* Paragraph, button, and footer styles */
+p,
+.btn,
+footer {
+  font-family: var(--desc-font);
+}
+
+/* Paragraph styles */
+p {
+  width: 80%;
+  background: linear-gradient(#000000de, #ffffff00);
+  margin: 2em auto;
+  padding: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  color: var(--desc-color);
+  text-align: justify;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+/* Text selection styles */
+p::selection {
+  color: black;
+  background-color: var(--desc-color);
+}
+
+/* Button styles */
+.btn {
+  display: block;
+  border: none;
+  background-color: #a2a0a0;
+  margin: 4em auto;
+  width: 200px;
+  height: 50px;
+  padding: 1em;
+  letter-spacing: 0.2em;
+  border-radius: 2em;
+}
+
+/* Button hover styles */
+.btn:hover {
+  box-shadow: 0px 0px 10px #f87320;
+  background-color: #000000;
+  color: var(--desc-color);
+}
+
+/* Button active styles */
+.btn:active {
+  box-shadow: 0px 0px 50px #f87320;
+}
+
+/* Footer styles */
+footer {
+  background-image: radial-gradient(circle, transparent 1%, #000000 1%);
+  background-size: 1em 1em;
+  background-position: 0 0, 0.5em 0.5em;
+  width: 100%;
+  margin-top: 5em;
+  padding: 1em;
+  color: var(--desc-color);
+  text-align: center;
+  font-weight: bold;
+}
