@@ -1,509 +1,188 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif, serif
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif, serif;
 }
 
-.mark {
-    color: #e57a1b
+body {
+  background-color: black;
+  color: white;
 }
 
-header {
-    position: sticky;
-    top: 0;
+.nav-bar {
+  display: flex;
+  padding: 1rem;
+  flex-flow: column;
+  align-items: center;
+  background: linear-gradient(150deg, #162f14, #17400d, #338f12);
+  margin: 1rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.nav-logo h1 {
+  font-weight: 900;
+  color: white;
+  padding: 1rem;
+}
+
+.nav-bar .nav-link {
+  margin-top: 0.8rem;
+}
+
+.nav-bar .nav-link ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar .nav-link ul li {
+  padding: 2rem;
+}
+
+.nav-bar .nav-link ul a {
+  display: none;
+}
+.nav-bar .nav-link ul i {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+.nav-link li:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 0.5rem black;
+  transition: all ease-out 300ms;
+}
+
+.hero-section {
+  margin: 1rem 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #297221;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #000000 4px
+    ),
+    repeating-linear-gradient(#92929255, #929292);
+}
+
+.hero-section h1,p {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.hero-section h1 {
+  font-size: 2.1rem;
+}
+
+.hero-section h1 span {
+  color: #25e31b;
+}
+
+.hero-section button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.hero-section .hero-image {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS rules for tablets go here */
+  .nav-bar {
     display: flex;
-    padding: 1em 6em;
-    background-color: #373534e7;
-    backdrop-filter: blur(20px);
-    color: #fff;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .nav-bar .nav-logo h1 {
+    padding: 0.2rem;
+    font-size: 1.5rem;
+  }
+  .nav-bar .nav-link {
+    margin-top: 1rem;
+  }
+
+  .nav-bar .nav-link ul {
+    display: flex;
+    text-align: center;
+    font-size: .8rem;
+  }
+
+  .nav-bar .nav-link ul li {
+    padding: 2rem;
+  }
+  .nav-bar .nav-link ul a {
+    display: inline;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+  }
+
+.hero-section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.hero-section button {
+  width: 15rem;
+  margin-top: 2rem;
+  padding: .8rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+}
+  .hero-section .hero-image {
+    display: block;
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 2560px) {
+  /* CSS rules for laptop & desktops go here */
+
+  body {
+    background: url(assets/nami.webp) repeat;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    text-transform: capitalize
-}
+    padding: 1rem;
+    background: transparent;
+  }
 
-header .logo,
-main .hero {
-    display: grid;
-    grid-template-columns: auto auto
-}
+  .nav-bar .nav-logo h1 {
+    background-color: transparent;
+    font-size: 3rem;
+  }
 
-header .logo {
-    font-size: 1.4vw;
+  .nav-bar .nav-link ul {
+    display: flex;
     align-items: center;
-    gap: 1em
-}
-
-.hero .hero-content img {
-    width: 100%;
-    border-radius: 100%;
-    max-width: 3em;
-    height: 3em;
-    margin-left: -1em;
-    border: .2em solid #fdf2e9
-}
-
-.hero>img,
-header img {
-    width: 100%;
-    height: auto
-}
-
-.test .per img {
-    border-radius: 100%;
-    width: 100%;
-    max-width: 5vw;
-    height: 5vw;
-    margin: 1em
-}
-
-header img {
-    max-width: 3.6vw;
-    border-radius: 100%
-}
-
-header nav>a {
-    font-size: 1vw;
+    font-size: .8rem;
+  }
+  .nav-bar .nav-link ul a {
+    display: inline;
     text-decoration: none;
-    padding: .5em;
-    color: #fff
-}
+    font-weight: bold;
+    color: white;
+  }
 
-header nav>a:hover {
-    transform: scale(.5);
-    font-weight: 700;
-    transition: all ease-in-out 200ms;
-    color: #e57a1b
-}
-
-.contact,
-.test,
-main .hero {
-    background-color: #fdf2e9;
-    gap: 2em;
-    padding: 1em
-}
-
-.hero>img {
-    max-width: 40vw
-}
-
-.hero .content {
-    display: flex;
-    flex-flow: column;
-    width: 55%
-}
-
-.hero .hero-content>h2,
-.hero .hero-content>p {
-    font-size: 3vw;
-    margin-bottom: .6em;
-    padding: .2em;
-    text-align: left
-}
-
-.hero .hero-content>p {
-    font-size: 1.5em;
-    margin-bottom: 1.3em;
-    word-spacing: .2em;
-    line-height: 1.4em
-}
-
-.hero .hero-content>button {
-    width: 7.5em;
-    font-size: 1.3vw;
-    font-weight: 700;
-    padding: .6em .9em;
-    margin-top: 3.5em;
-    background-color: #e57a1b;
-    color: #fff;
-    border: 0;
-    border-radius: .4em
-}
-
-.hero .hero-content .prof {
-    padding: .5em;
-    margin-top: 8em
-}
-
-.hero .hero-content .prof,
-.service .grid .sec .bottom {
-    display: flex;
-    align-items: center
-}
-
-.hero .hero-content .prof p {
-    margin-left: 1.1em;
-    font-size: 1.4vw;
-    font-weight: 700
-}
-
-.service,
-.whb aside {
-    background-color: #211f24;
-    color: #fff;
-    padding: 2em
-}
-
-.whb aside {
-    width: 20vw;
-    height: max-content;
-    background-color: #272727;
-    margin-right: -4em;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em
-}
-
-.service .sub {
-    width: 50%;
-    margin: 2em auto;
-    text-align: center;
-    font-weight: 700
-}
-
-.service .sub h2,
-.test h2,
-.whb .frm>h1 {
-    font-size: 2vw;
-    font-weight: bolder
-}
-
-.service .sub h2 {
-    text-transform: uppercase;
-    margin-bottom: 2em
-}
-
-.service .sub blockquote {
-    font-size: 1.2vw;
-    font-weight: 400;
-    margin-bottom: 4em;
-    padding: .2em;
-    word-spacing: .3em
-}
-
-.service .sub span {
-    color: #f70037
-}
-
-.service .grid {
-    display: grid;
-    width: 86vw;
-    margin: 0 auto;
-    grid-template-columns: auto auto auto;
-    gap: 2em 2em
-}
-
-.service .grid .sec,
-.test .prof {
-    display: grid;
-    align-content: center
-}
-
-.service .grid .sec {
-    gap: 1em;
-    grid-template-rows: 16vh 37vh 10vh;
-    background-color: #24252a
-}
-
-.service .grid .sec i {
-    font-size: 2vw;
-    margin-top: .5em;
-    margin-left: .5em;
-    padding: .5em;
-    color: #f70037
-}
-
-.service .grid .sec h3 {
-    font-size: 1.4vw;
-    margin-top: .2em;
-    padding-bottom: 1.5em;
-    padding-left: 1.5em;
-    border-bottom: 2px solid #ffffff2d
-}
-
-.service .grid .sec p {
-    font-size: 1.1vw;
-    color: #ffffff42;
-    text-align: left;
-    word-spacing: .5em;
-    line-height: 1.2em
-}
-
-.service .grid .sec .bottom,
-.service .grid .sec p {
-    padding: 2em;
-    font-weight: 700
-}
-
-.service .grid .sec .bottom i {
-    margin: 0;
-    font-size: 1.5em
-}
-
-.test h2 {
-    flex-grow: 2;
-    text-align: center
-}
-
-.test .prof {
-    display: flex;
-    padding: 2em;
-    justify-content: center
-}
-
-.test .prof .per,
-.whb .frm {
-    display: flex;
-    align-items: center
-}
-
-.test .prof .per,
-.whb {
-    background-color: #fff;
-    padding: 2em
-}
-
-.test .prof .per {
-    border-radius: .5em;
-    width: 100%;
-    max-width: 20em;
-    height: auto;
-    margin: 1vw;
-    flex-flow: column wrap
-}
-
-.test .prof .per .nm {
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1vw
-}
-
-.test .prof .per p {
-    padding: .5em;
-    text-align: justify;
-    margin: .6em
-}
-
-.whb {
-    width: 60%;
-    margin: 2em auto;
-    border-radius: 2em;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .329);
-    overflow: hidden
-}
-
-.whb .frm {
-    flex-flow: row nowrap;
-    justify-content: space-between
-}
-
-.whb .tit {
-    margin-left: 2.5vw;
-    padding: .5vw;
-}
-
-.whb .tit>h1 {
-    margin-bottom: .5vw;
-    font-size: 2vw;
-    font-weight: 700;
-}
-
-form {
-    margin: 1em 0 0 0;
-    flex-grow: 1;
-    padding: 0 4em 0 4em;
-}
-
-form button,
-form input,
-textarea {
-    width: 100%;
-    font-size: 1vw;
-    border: 0
-}
-
-form input,
-textarea {
-    display: block;
-    margin-bottom: 1em;
-    padding: 2em 0 .5em;
-    border-bottom: .1em solid #00000034;
-    resize: none
-}
-
-form button {
-    margin-bottom: 3em;
-    padding: 1em;
-    border-radius: 2em;
-    color: #fff;
-    font-weight: 700;
-    background: linear-gradient(to right, rgba(128, 0, 128, .5), rgba(0, 0, 255, .555))
-}
-
-.whb aside span {
-    font-size: .8vw;
-    font-weight: 700;
-    padding: .5em
-}
-
-.whb aside i {
-    margin: 1em .5em
-}
-
-input:focus,
-textarea:focus {
-    outline: 0
-}
-
-@media only screen and (min-width:768px) and (max-width:1024px) {
-    header {
-        position: static;
-        display: flex;
-        flex-flow: column nowrap
-    }
-
-    header nav {
-        margin: 2em 0
-    }
-
-    .hero .hero-content>h2 {
-        font-size: 3.6vw
-    }
-
-    .hero .hero-content>p,
-    .service .grid .sec .bottom,
-    .service .grid .sec h3,
-    .service .grid .sec p,
-    .service .sub blockquote,
-    header nav a {
-        font-size: 2.2vw
-    }
-
-    header .logo,
-    main .hero {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center
-    }
-
-    .hero>img {
-        width: 100%;
-        max-width: 50vw;
-        height: auto
-    }
-
-    .hero .hero-content>h1 {
-        font-size: 3.5vw
-    }
-
-    .hero .hero-content>button {
-        width: 22vw;
-        font-size: 2.5vw;
-        font-weight: 700
-    }
-
-    .service .sub {
-        width: 90%
-    }
-
-    .service .grid .sec i,
-    .service .sub h2 {
-        font-size: 4vw
-    }
-
-    .hero,
-    .service .grid {
-        display: flex;
-        width: 100%
-    }
-
-    .service .grid {
-        flex-flow: row wrap;
-        justify-content: center
-    }
-
-    .service .grid .sec {
-        width: 40vw;
-        grid-template-rows: 15vh 48vh 15vh
-    }
-
-    .service .grid .sec .bottom i {
-        margin: 0;
-        font-size: 1.5em
-    }
-
-    .test h2 {
-        font-size: 3vw
-    }
-
-    .test .prof {
-        display: flex;
-        padding: 2em
-    }
-
-    .test .prof .per {
-        margin: .8vw;
-        padding: .8vw;
-    }
-
-    .test .prof .per .nm {
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 1.8vw
-    }
-
-    .test .prof .per p {
-        padding: 0;
-        margin: 1em;
-        font-size: 1.5vw
-    }
-
-    .test .per img {
-        width: 100%;
-        max-width: 8vw;
-        height: 8vw;
-        margin: 1em
-    }
-
-    .contact .whb {
-        width: 79vw;
-    }
-
-    .contact .whb .tit>h1 {
-        margin-bottom: 3vw;
-        font-size: 4vw;
-        font-weight: 700;
-    }
-
-    .contact .whb .frm {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .contact .whb .frm form {
-        width: 100%;
-        padding: 2em;
-    }
-
-    .contact .whb .frm form input,
-    textarea {
-        font-size: 2vw;
-    }
-
-    form button {
-        margin-top: 5vw;
-        margin-bottom: 0;
-        font-size: large;
-    }
-
-    .contact .whb .frm aside {
-        margin: 0;
-        padding: 2em;
-        width: 100%;
-        border-radius: 1.5em;
-    }
 }
