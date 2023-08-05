@@ -12,6 +12,7 @@ body {
 }
 
 .contact-section .contact-form form button,.hero-section button {
+    background-color: #000;
     color: #fff;
     width: 100%;
     margin-top: 2rem;
