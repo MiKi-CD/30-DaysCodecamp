@@ -502,7 +502,8 @@ footer .sub button {
 
     .service-container,.testimonial-section .customer-section,footer {
         display: grid;
-        grid-template-columns: auto auto auto
+        grid-template-columns: auto auto auto;
+        gap: 1rem 2rem;
     }
 
     .testimonial-section .customer-section {
